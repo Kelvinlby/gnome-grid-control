@@ -1,0 +1,9 @@
+{
+  "uuid": "grid-control@kelvin",
+  "name": "Grid Control",
+  "description": "Set the app grid's columns, rows, icon size and padding. Applies instantly, no relog or drag needed.",
+  "shell-version": ["50", "51"],
+  "settings-schema": "org.gnome.shell.extensions.grid-control",
+  "session-modes": ["user", "unlock-dialog"],
+  "version": 1
+}

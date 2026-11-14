@@ -49,7 +49,10 @@ export default class GridControlExtension extends Extension {
         this._relayout();
         this._repack();
 
-        this._settings = this._appDisplay = this._grid = this._layout = null;
+        this._settings = null;
+        this._appDisplay = null;
+        this._grid = null;
+        this._layout = null;
         this._origStyle = null;
     }
 

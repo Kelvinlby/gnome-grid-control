@@ -37,8 +37,10 @@ export default class GridControlExtension extends Extension {
         this._grid.disconnect(this._styleId);
         this._layout.disconnect(this._colsId);
         this._layout.disconnect(this._rowsId);
-        if (this._repackId)
+        if (this._repackId) {
             GLib.source_remove(this._repackId);
+            this._repackId = 0;
+        }
 
         delete this._layout._fixedCols;
         delete this._layout._fixedRows;
@@ -48,6 +50,7 @@ export default class GridControlExtension extends Extension {
         this._repack();
 
         this._settings = this._appDisplay = this._grid = this._layout = null;
+        this._origStyle = null;
     }
 
     _apply() {
